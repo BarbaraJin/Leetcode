@@ -49,9 +49,9 @@ public:
 int main(int argc, char const *argv[])
 {
 	vector<string> v = std::vector<string>();
-	// v.push_back("flow");
-	// v.push_back("fla");
-	// v.push_back("flb");
+	v.push_back("flow");
+	v.push_back("fla");
+	v.push_back("flb");
 
 	Solution answer;
 	string ans = answer.longestCommonPrefix(v);
