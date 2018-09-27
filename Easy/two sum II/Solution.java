@@ -17,7 +17,7 @@ class Solution {
         int[] answers = new int[2];
 
         int ind1=0,ind2= numbers.length-1;
-        //TODO: while condition
+        
         while (true) {
             int secondInt = target-numbers[ind1];
             if (secondInt<numbers[ind2]) {
