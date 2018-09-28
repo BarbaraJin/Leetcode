@@ -33,16 +33,6 @@ class ValidPalindrome {
                 }
                 else{
                     return (palindrome(s,i+1,j)||palindrome(s,i,j-1));
-                    // if(s.charAt(i+1)==s.charAt(j)){
-                    //     i++;
-                    // }
-                    // else if(s.charAt(j-1)==s.charAt(i)){
-                    //     j--;
-                    // }
-                    // else{
-                    //     return false;
-                    // }
-                    // delete = true;
                 }
             }
             i++;
