@@ -35,13 +35,15 @@ Explanation: You don't need to remove any of the intervals since they're already
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
-class Solution {
+// class Solution {
+class NonOverlappingIntervals {
     public int eraseOverlapIntervals(Interval[] intervals) {
         int answer=0;
         // sort Intervals based on the start point
-        Arrays.sort(intervals, Comparator.comparingInt(o -> o.start));
+        // Arrays.sort(intervals, Comparator.comparingInt(o -> o.start));
+        Arrays.sort(intervals, new myComparator());
 
-        int lastStart=-1,lastEnd=0;
+        int lastStart=Integer.MIN_VALUE,lastEnd=Integer.MIN_VALUE;
         for (int i = 0; i < intervals.length; i++) {
             Interval curInterval = intervals[i];
             if(curInterval.start<lastEnd){
@@ -58,5 +60,14 @@ class Solution {
         }
 
         return answer;
+    }
+
+    /**
+     * myComparator
+     */
+    public class myComparator implements Comparator<Interval>{
+        public int compare(Interval a, Interval b){
+            return a.start - b.start;
+        }
     }
 }
