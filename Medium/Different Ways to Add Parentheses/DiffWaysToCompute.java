@@ -21,8 +21,8 @@ Explanation:
 (2*((3-4)*5)) = -10 
 (((2*3)-4)*5) = 10 */
 
-// class DiffWaysToCompute {
-class Solution {
+class DiffWaysToCompute {
+// class Solution {
     public List<Integer> diffWaysToCompute(String input) {
         List<Integer> answer = new ArrayList<Integer>();
         boolean noSim = true;
