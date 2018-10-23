@@ -19,6 +19,12 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 // class Solution {
 class HouseRobber {
     public int rob(int[] nums) {
-        
+        int prev1 = 0, prev2 = 0, answer=0;
+        for (int i = 0; i < nums.length; i++) {
+            answer = Math.max(prev1, nums[i]+prev2);
+            prev2 = prev1;
+            prev1 = answer;
+        }
+        return answer;
     }
 }
