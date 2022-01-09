@@ -17,7 +17,6 @@ public class BitwiseComplement {
         System.out.println("log2n: "+ ((int) (Math.log(n)/Math.log(2d))));
         System.out.println("decimal of log2n and shift: "+ ((2<<((int) (Math.log(n)/Math.log(2d))))));
         System.out.println("binary of log2n and shift: "+ (Integer.toBinaryString((2<<((int) (Math.log(n)/Math.log(2d)))))));
-        System.out.println("c: "+ ((2<<'c')));
         System.out.println("binary of log2n and shift and -1: "+ (Integer.toBinaryString((2<<((int) (Math.log(n)/Math.log(2d))))-1)));
         System.out.println("binary of n: "+ (Integer.toBinaryString(n)));
         System.out.println("binary of log2n and shift and -1 - n: "+ (Integer.toBinaryString((2<<((int) (Math.log(n)/Math.log(2d))))-1 - n)));
