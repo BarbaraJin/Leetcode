@@ -1,6 +1,5 @@
 package easy;
 import java.util.*;
-import java.util.Map.Entry;
 
 public class FindTheDifference389 {
     public static char findTheDifference(String s, String t) {

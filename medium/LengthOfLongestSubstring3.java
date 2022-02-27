@@ -1,9 +1,6 @@
 package medium;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class LengthOfLongestSubstring3 {
     public static int lengthOfLongestSubstring(String s) {

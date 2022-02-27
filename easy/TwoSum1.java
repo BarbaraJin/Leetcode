@@ -24,8 +24,8 @@ public class TwoSum1 {
     public static void main(String[] args) throws Exception {
         int[] a = new int[10000];
         int length = new Random().nextInt(10000);
-        int n = new Random().nextInt(length);
-        int m = new Random().nextInt(length);
+        // int n = new Random().nextInt(length);
+        // int m = new Random().nextInt(length);
         for (int i = 0; i < length; i++) {
             a[i] = new Random().nextInt(1000000000);
         }
