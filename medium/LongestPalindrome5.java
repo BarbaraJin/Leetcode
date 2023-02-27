@@ -1,7 +1,5 @@
 package medium;
 
-import java.util.Date;
-
 public class LongestPalindrome5 {
     public static String longestPalindrome(String s) {
         for (int i = s.length(); i > 0; i--) {

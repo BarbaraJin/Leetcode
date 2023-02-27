@@ -1,5 +1,6 @@
 package print;
 
+import java.util.Date;
 import java.util.List;
 import java.util.StringJoiner;
 
@@ -65,5 +66,9 @@ public class Print {
             traversePreOrder(sb, paddingForBoth, pointerForLeft, node.left);
             traversePreOrder(sb, paddingForBoth, pointerForRight, node.right);
         }
+    }
+
+    public static void printRunTime(Date start, Date end) {
+        System.out.println("run time: " + (end.getTime() - start.getTime()));
     }
 }
