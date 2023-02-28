@@ -71,4 +71,8 @@ public class Print {
     public static void printRunTime(Date start, Date end) {
         System.out.println("run time: " + (end.getTime() - start.getTime()));
     }
+
+    public static void printInteger(int print) {
+        System.out.println(print);
+    }
 }
