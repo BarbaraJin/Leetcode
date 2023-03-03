@@ -21,6 +21,14 @@ public class Print {
         System.out.println(print.toString());
     }
 
+    public static void printArrayBigInteger(Integer[] answer) {
+        StringJoiner print = new StringJoiner(",");
+        for (Integer i : answer) {
+            print.add(i == null ? "null" : Integer.toString(i));
+        }
+        System.out.println(print.toString());
+    }
+
     public static void printListOfListInteger(List<List<Integer>> answer) {
         StringJoiner print = new StringJoiner("\n");
         for (List<Integer> list : answer) {
@@ -49,15 +57,15 @@ public class Print {
     }
 
     public static void traversePreOrder(StringBuilder sb, String padding, String pointer, TreeNode node) {
-        
-            sb.append(padding);
-            sb.append(pointer);
-            sb.append(node!= null?String.valueOf(node.val):"null");
-            sb.append("\n");
-            
-            StringBuilder paddingBuilder = new StringBuilder(padding);
-            paddingBuilder.append("│  ");
-            if (node!=null && (node.left != null || node.right != null)) {
+
+        sb.append(padding);
+        sb.append(pointer);
+        sb.append(node != null ? String.valueOf(node.val) : "null");
+        sb.append("\n");
+
+        StringBuilder paddingBuilder = new StringBuilder(padding);
+        paddingBuilder.append("│  ");
+        if (node != null && (node.left != null || node.right != null)) {
             String paddingForBoth = paddingBuilder.toString();
             String pointerForRight = "└──";
             String pointerForLeft = "├──";
@@ -72,7 +80,11 @@ public class Print {
         System.out.println("run time: " + (end.getTime() - start.getTime()));
     }
 
-    public static void printInteger(int print) {
-        System.out.println(print);
+    public static void print(Object print) {
+        if (print instanceof String) {
+            System.out.println("'" + print + "'");
+        } else {
+            System.out.println(print);
+        }
     }
 }

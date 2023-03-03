@@ -23,7 +23,7 @@ public class RemoveElement27 {
         Date start = new Date();
         int answer = removeElement(a, 6);
         Date end = new Date();
-        Print.printInteger(answer);
+        Print.print(answer);
         Print.printArrayInteger(a);
         Print.printRunTime(start, end);
     }

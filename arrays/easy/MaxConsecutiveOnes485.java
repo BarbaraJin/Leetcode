@@ -29,7 +29,7 @@ public class MaxConsecutiveOnes485 {
         Date start = new Date();
         int answer = findMaxConsecutiveOnes(a);
         Date end = new Date();
-        Print.printInteger(answer);
+        Print.print(answer);
         Print.printArrayInteger(a);
         Print.printRunTime(start, end);
     }

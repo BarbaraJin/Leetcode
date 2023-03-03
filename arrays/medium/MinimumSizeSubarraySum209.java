@@ -23,7 +23,7 @@ public class MinimumSizeSubarraySum209 {
         Date start = new Date();
         int answer = minSubArrayLen(90, a);
         Date end = new Date();
-        Print.printInteger(answer);
+        Print.print(answer);
         Print.printRunTime(start, end);
     }
 }
