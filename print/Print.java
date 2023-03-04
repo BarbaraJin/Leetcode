@@ -42,8 +42,23 @@ public class Print {
     }
 
     public static void printListNode(ListNode node) {
+        if (node == null) {
+            print("null");
+        }
         StringJoiner print = new StringJoiner("->");
         while (node != null) {
+            print.add(String.valueOf(node.val));
+            node = node.next;
+        }
+        System.out.println(print.toString());
+    }
+
+    public static void printListNodeWithLength(ListNode node, int length) {
+        if (node == null) {
+            print("null");
+        }
+        StringJoiner print = new StringJoiner("->");
+        for (int i = 0; node != null && i < length; i++) {
             print.add(String.valueOf(node.val));
             node = node.next;
         }
