@@ -59,4 +59,28 @@ public class ListNode {
         }
         return answer;
     }
+
+    public static void addAtTail(ListNode node, int val) {
+        ListNode tail = node;
+        if (tail == null) {
+            node = new ListNode(val);
+            return;
+        }
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+        tail.next = new ListNode(val);
+    }
+
+    public static void addAtTail(ListNode node, ListNode val) {
+        ListNode tail = node;
+        if (tail == null) {
+            node = val;
+            return;
+        }
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+        tail.next = val;
+    }
 }
