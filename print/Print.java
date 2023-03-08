@@ -1,8 +1,6 @@
 package print;
 
-import java.util.Date;
-import java.util.List;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class Print {
     public static void printListInteger(List<Integer> answer) {
