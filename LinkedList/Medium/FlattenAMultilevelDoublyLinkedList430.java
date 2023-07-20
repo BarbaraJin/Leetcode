@@ -1,8 +1,6 @@
 package LinkedList.Medium;
 
 import java.util.Date;
-
-import print.ListNode;
 import print.Node;
 import print.Print;
 
@@ -32,8 +30,6 @@ public class FlattenAMultilevelDoublyLinkedList430 {
 
     public static void main(String[] args) throws Exception {
         int[] input = { 3, 2, 0, -4 };
-        int[] input3 = { 1 };
-        int[] input4 = {};
         int[] input1 = { 1, 2 };
 
         Node a = Node.createNode(input);
