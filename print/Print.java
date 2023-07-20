@@ -89,6 +89,32 @@ public class Print {
         }
     }
 
+    public static void printNode(Node node) {
+        StringBuilder sb = new StringBuilder();
+        traversePreOrder(sb, "", "", node);
+        System.out.print(sb.toString());
+    }
+
+    public static void traversePreOrder(StringBuilder sb, String padding, String pointer, Node node) {
+
+        sb.append(padding);
+        sb.append(pointer);
+        sb.append(node != null ? String.valueOf(node.val) : "null");
+        sb.append("\n");
+
+        StringBuilder paddingBuilder = new StringBuilder(padding);
+        paddingBuilder.append("│  ");
+        if (node != null && (node.child != null || node.next != null)) {
+            String paddingForBoth = paddingBuilder.toString();
+            String pointerForRight = "└──";
+            String pointerForLeft = "├──";
+            // String pointerForLeft = (node.right != null) ? "├──" : "└──";
+
+            traversePreOrder(sb, paddingForBoth, pointerForLeft, node.child);
+            traversePreOrder(sb, paddingForBoth, pointerForRight, node.next);
+        }
+    }
+
     public static void printRunTime(Date start, Date end) {
         System.out.println("run time: " + (end.getTime() - start.getTime()));
     }
